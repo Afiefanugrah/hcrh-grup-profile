@@ -1,37 +1,103 @@
-*,
-body {
-  background-color: antiquewhite;
+/* Reset default browser styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.container-kelompok {
-  height: 100px;
-  border: 2px solid black;
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  overflow: hidden;
+  position: relative;
+}
+
+/* .container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+} */
+
+.slider {
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
 .Profil {
-  width: 250px;
-  height: auto;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 300px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.Profil > img {
-  width: 200px;
-  height: 250px;
-  border: 1px solid black;
-  margin-bottom: 10px;
+.Profil:hover {
+  transform: scale(1.05);
 }
 
-.social-link {
-  text-decoration: none;
-  margin: 5px 0;
-  color: blue;
+img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Tombol navigasi */
+button {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0077b5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  background-color: #005f8f;
+}
+
+button:focus {
+  outline: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .Profil {
+    min-width: 250px;
+  }
 }
