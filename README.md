@@ -2,5 +2,5 @@
 
 Member
 
-* M. Afief Anugrah
-*
+- M. Afief Anugrah
+- Wilsen Lau
