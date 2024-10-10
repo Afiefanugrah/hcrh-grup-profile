@@ -16,25 +16,16 @@ body {
   position: relative;
 }
 
-/* .container {
-  width: 100%;
-  max-width: 1200px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-} */
-
-.slider {
+.container {
   display: flex;
   gap: 20px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  overflow: hidden;
+  padding: 15px;
+  border: 1px solid red;
 }
 
-.slider::-webkit-scrollbar {
-  display: none;
+.slider {
+  display: contents;
 }
 
 .Profil {
@@ -42,8 +33,6 @@ body {
   padding: 20px;
   border-radius: 15px;
   text-align: center;
-  min-width: 300px;
-  scroll-snap-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
@@ -53,8 +42,8 @@ body {
 }
 
 img {
-  width: 150px;
-  height: 200px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -65,39 +54,26 @@ h2 {
   margin-top: 10px;
 }
 
-/* Tombol navigasi */
-button {
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #0077b5;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.butonLeft {
+  height: 30px;
+  width: 40px;
+  border-radius: 30px;
+  /* border: 1px ; */
+  margin-right: 70px;
+  position: relative;
 }
-
-button:hover {
-  background-color: #005f8f;
-}
-
-button:focus {
-  outline: none;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+.butonRight {
+  height: 30px;
+  width: 40px;
+  border-radius: 30px;
+  /* border: 1px ; */
+  margin-left: 70px;
+  position: relative;
 }
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
-  .Profil {
-    min-width: 250px;
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
