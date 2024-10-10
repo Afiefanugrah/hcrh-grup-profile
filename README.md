@@ -1,6 +1,9 @@
-# infinity-learning-project-team-profile
+# il-team-profile
 
-Member
+team member
 
-- M. Afief Anugrah
+- Wahyu Priambodo
 - Wilsen Lau
+- M. Alzidan Pratama
+- Mediana Hana Putri
+- M. Afief Anugrah
